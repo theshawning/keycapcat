@@ -1,9 +1,23 @@
 import React from 'react'
+import Header from './Header'
+import Wrapper from './Wrapper'
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+  }
+`;
 
 export default function App() {
   return (
-    <div>
-      <h1>My App</h1>
-    </div>
+    <>
+      <GlobalStyle />
+      <Wrapper>
+        <Header />
+      </Wrapper>
+    </>
   )
 }
