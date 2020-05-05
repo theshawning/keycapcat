@@ -1,4 +1,4 @@
-export const keycaps = [
+export const keyCapData = [
   {
     name: 'GMK Nautilus',
     designer: 'Zambumon',
@@ -12,4 +12,4 @@ export const keycaps = [
       legends: '#00c7bb'
     }
   }
-]
+];

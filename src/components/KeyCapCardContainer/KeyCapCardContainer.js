@@ -1,7 +1,16 @@
 import React from 'react'
 import KeyCapCard from '../KeyCapCard/KeyCapCard'
-import keycaps from '../../keycapinfo'
+import { keyCapData } from '../../keycapinfo'
 
 export default function KeyCapCardContainer(props) {
-  {keycaps.map(keycap => {return <KeyCapCard props={props} />})}
+  return (
+  keyCapData.map((props) => {
+    return (
+      <KeyCapCard 
+        key={name}
+        name={props.name}
+        primary={props.colors.primary}
+      />
+    )
+  }))
 }

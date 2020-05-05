@@ -57,11 +57,10 @@ const CardFooter = styled.div`
   }
 `;
 
-export default function KeyCapCard() {
+export default function KeyCapCard(props) {
   return (
     <CardContainer>
-      <CardTitle backgroundColor='#005278' textColor='#fec900'>
-        Gmk Nautilus</CardTitle>
+      <CardTitle backgroundColor='#005278' textColor='#fec900'>{props.name}</CardTitle>
       <CardImgContainer img={nautRender}/>
       <CardFooter backgroundColor='#233653'>
         <SellerButton seller='Dixie Mech' />
@@ -71,3 +70,19 @@ export default function KeyCapCard() {
     </CardContainer>
   )
 }
+
+/*
+export default function KeyCapCard() {
+  return (
+    <CardContainer>
+      <CardTitle backgroundColor='#005278' textColor='#fec900'>GMK Nautilus</CardTitle>
+      <CardImgContainer img={nautRender}/>
+      <CardFooter backgroundColor='#233653'>
+        <SellerButton seller='Dixie Mech' />
+        <SellerButton seller='Candy Keys' />
+        <SellerButton seller='Novel Keys' />
+      </CardFooter>
+    </CardContainer>
+  )
+}
+*/
