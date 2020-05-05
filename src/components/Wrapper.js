@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
 export default styled.div`
-  margin-left: auto;
-  margin-right: auto;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
   max-width: 960px;
 `;

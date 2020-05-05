@@ -8,7 +8,6 @@ const Navbar = styled.nav`
   height: 3rem;
   width: 100%;
   background-color: #E91E63;
-  position: fixed;
 `;
 
 const Logo = styled.p`

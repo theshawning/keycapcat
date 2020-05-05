@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from './Header'
-import Wrapper from './Wrapper'
 import { createGlobalStyle } from 'styled-components'
+
+import { Wrapper, Header, KeyCapCard } from './components'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -15,8 +15,9 @@ export default function App() {
   return (
     <>
       <GlobalStyle />
+      <Header />
       <Wrapper>
-        <Header />
+        <KeyCapCard />
       </Wrapper>
     </>
   )
