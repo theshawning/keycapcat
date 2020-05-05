@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import nautRender from '../../assets/img/gmk-nautilus-render.png'
+import bushidoRender from '../../assets/img/gmk-bushido-render.png'
 import SellerButton from './SellerButton'
 
 const CardContainer = styled.div`
@@ -58,11 +59,13 @@ const CardFooter = styled.div`
 `;
 
 export default function KeyCapCard(props) {
+  const { cardHeaderBg, cardFooterBg, textColor, name } = props;
+
   return (
     <CardContainer>
-      <CardTitle backgroundColor='#005278' textColor='#fec900'>{props.name}</CardTitle>
-      <CardImgContainer img={nautRender}/>
-      <CardFooter backgroundColor='#233653'>
+      <CardTitle backgroundColor={cardHeaderBg} textColor={textColor}>{name}</CardTitle>
+      <CardImgContainer img={bushidoRender}/>
+      <CardFooter backgroundColor={cardFooterBg}>
         <SellerButton seller='Dixie Mech' />
         <SellerButton seller='Candy Keys' />
         <SellerButton seller='Novel Keys' />

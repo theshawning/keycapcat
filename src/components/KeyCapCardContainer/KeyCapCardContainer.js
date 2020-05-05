@@ -4,12 +4,14 @@ import { keyCapData } from '../../keycapinfo'
 
 export default function KeyCapCardContainer(props) {
   return (
-  keyCapData.map((props) => {
+  keyCapData.map((props, index) => {
     return (
       <KeyCapCard 
-        key={name}
+        key={index}
         name={props.name}
-        primary={props.colors.primary}
+        textColor={props.colors.accent}
+        cardHeaderBg={props.colors.primary}
+        cardFooterBg={props.colors.secondary}
       />
     )
   }))
