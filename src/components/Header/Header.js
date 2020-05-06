@@ -19,8 +19,10 @@ const Logo = styled.p`
 export default function Header() {
   return (
     <Navbar>
-      <Logo>KeyCapCat</Logo>
+      <Logo>&bull; KeyCapCat &bull;</Logo>
       <BurgerMenu />     
     </Navbar>
   )
 }
+
+// background-color: #E91E63;

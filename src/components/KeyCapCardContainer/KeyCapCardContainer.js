@@ -9,6 +9,8 @@ export default function KeyCapCardContainer(props) {
       <KeyCapCard 
         key={index}
         name={props.name}
+        startDate={props.startDate}
+        endDate={props.endDate}
         textColor={props.colors.accent}
         cardHeaderBg={props.colors.primary}
         cardFooterBg={props.colors.secondary}

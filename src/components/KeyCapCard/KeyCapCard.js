@@ -6,13 +6,19 @@ import SellerButton from './SellerButton'
 
 const CardContainer = styled.div`
   display: flex;
-  align-self: center;
   flex-direction: column;
   width: 90%;
   margin: .5rem;
   padding: 1rem;
   border-radius: 1rem;
+  background-color: white;
   box-shadow: 2px 2px 8px black;
+  &:hover {
+    cursor: pointer;
+  }
+  @media (min-width: 1000px) {
+    width: 45%;
+  }
 `;
 
 const CardTitle = styled.h2`
@@ -24,27 +30,26 @@ const CardTitle = styled.h2`
 `;
 
 const CardImgContainer = styled.div`
-  height: 18rem;
+  height: 16rem;
   width: 100%;
   background-image: url(${props => props.img});
   background-position: center;
   background-size: cover;
-
-  @media (max-width: 850px) {
-    height: 16rem
-  }  
   @media (max-width: 750px) {
-    height: 14rem
+    height: 12rem;
   }  
   @media (max-width: 600px) {
-    height: 12rem
-  }  
+    height: 10rem;
+  }
+  @media (max-width: 400px) {
+    height: 8rem;
+  }
 `;
 
 const CardFooter = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 1rem;
   height: 3rem;
   background-color: ${props => props.backgroundColor};
@@ -59,33 +64,15 @@ const CardFooter = styled.div`
 `;
 
 export default function KeyCapCard(props) {
-  const { cardHeaderBg, cardFooterBg, textColor, name } = props;
+  const { cardHeaderBg, cardFooterBg, textColor, name, startDate, endDate } = props;
 
   return (
     <CardContainer>
       <CardTitle backgroundColor={cardHeaderBg} textColor={textColor}>{name}</CardTitle>
       <CardImgContainer img={bushidoRender}/>
       <CardFooter backgroundColor={cardFooterBg}>
-        <SellerButton seller='Dixie Mech' />
-        <SellerButton seller='Candy Keys' />
-        <SellerButton seller='Novel Keys' />
+        <p>Runs from {startDate} to {endDate}</p>
       </CardFooter>
     </CardContainer>
   )
 }
-
-/*
-export default function KeyCapCard() {
-  return (
-    <CardContainer>
-      <CardTitle backgroundColor='#005278' textColor='#fec900'>GMK Nautilus</CardTitle>
-      <CardImgContainer img={nautRender}/>
-      <CardFooter backgroundColor='#233653'>
-        <SellerButton seller='Dixie Mech' />
-        <SellerButton seller='Candy Keys' />
-        <SellerButton seller='Novel Keys' />
-      </CardFooter>
-    </CardContainer>
-  )
-}
-*/
