@@ -37,8 +37,8 @@ const MenuBurger = styled.div`
   }
 `;
 
-export default function BurgerMenu() {
+export default function BurgerMenu(props) {
   return (
-    <MenuBtn><MenuBurger /></MenuBtn>
+    <MenuBtn onClick={props.click}><MenuBurger /></MenuBtn>
   )
 }

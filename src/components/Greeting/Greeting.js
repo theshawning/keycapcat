@@ -4,8 +4,8 @@ import styled from 'styled-components'
 const Landing = styled.div`
   width: 80%;
   max-width: 1200px;
-  margin: 1rem auto;
-  /* color: #E91E63; */
+  margin: 3rem auto;
+  margin-top: 6rem;
 `;
 
 export default function Greeting() {

@@ -29,4 +29,4 @@ export default function App() {
   )
 }
 
-// FFEBCF - F1D1B5 - F0B7A4 - F18C8E - 305F72
+// #FFEBCF - #F1D1B5 - #F0B7A4 - #F18C8E - #305F72

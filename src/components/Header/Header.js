@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import BurgerMenu from './BurgerMenu'
+import MenuOpen from './MenuOpen'
 
 const Navbar = styled.nav`
   display: flex;
   align-items: center;
+  position: fixed;
+  z-index: 10;
+  top: 0;
   height: 3rem;
   width: 100%;
-  background-color: #E91E63;
+  background-color: #0B5F73;
 `;
 
 const Logo = styled.p`
@@ -17,12 +21,17 @@ const Logo = styled.p`
 `;
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function openMenu() {
+    setMenuOpen(prev => !prev);
+  }
+
   return (
     <Navbar>
       <Logo>&bull; KeyCapCat &bull;</Logo>
-      <BurgerMenu />     
+      <BurgerMenu click={openMenu}/>   
+      <MenuOpen open={menuOpen} />
     </Navbar>
   )
 }
-
-// background-color: #E91E63;
