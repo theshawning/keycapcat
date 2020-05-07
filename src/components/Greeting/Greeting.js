@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Landing = styled.div`
-  width: 80%;
-  max-width: 1200px;
   margin: 3rem auto;
   margin-top: 6rem;
+  max-width: 1200px;
+  width: 80%;
 `;
 
 export default function Greeting() {

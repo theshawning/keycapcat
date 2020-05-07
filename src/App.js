@@ -4,11 +4,11 @@ import { Wrapper, Header, KeyCapCardContainer, Greeting } from './components'
 
 const GlobalStyle = createGlobalStyle`
   * {
+    box-sizing: 0;
+    font-family: 'Roboto Condensed';
     margin: 0;
     padding: 0;
-    box-sizing: 0;
     text-decoration: none;
-    font-family: 'Roboto Condensed';
   }
 
   body {

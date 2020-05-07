@@ -4,14 +4,14 @@ import BurgerMenu from './BurgerMenu'
 import MenuOpen from './MenuOpen'
 
 const Navbar = styled.nav`
-  display: flex;
   align-items: center;
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  height: 3rem;
-  width: 100%;
   background-color: #0B5F73;
+  display: flex;
+  height: 3rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 `;
 
 const Logo = styled.p`

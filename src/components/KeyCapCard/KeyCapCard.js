@@ -2,18 +2,17 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import nautRender from '../../assets/img/gmk-nautilus-render.png'
 import bushidoRender from '../../assets/img/gmk-bushido-render.png'
-import SellerButton from './SellerButton'
 import KeyCapCardExpansion from './KeyCapCardExpansion'
 
 const CardContainer = styled.div`
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 8px black;
   display: flex;
   flex-direction: column;
-  width: 90%;
   margin: .5rem;
   padding: 1rem;
-  border-radius: 1rem;
-  background-color: white;
-  box-shadow: 2px 2px 8px black;
+  width: 90%;
   &:hover {
     cursor: pointer;
   }
@@ -23,19 +22,19 @@ const CardContainer = styled.div`
 `;
 
 const CardTitle = styled.h2`
-  display: flex;
-  color: ${props => props.textColor || 'white'};
-  padding: .8rem;
   background-color: ${props => props.backgroundColor};
+  color: ${props => props.textColor || 'white'};
+  display: flex;
+  padding: .8rem;
   text-transform: uppercase;
 `;
 
 const CardImgContainer = styled.div`
-  height: 16rem;
-  width: 100%;
   background-image: url(${props => props.img});
   background-position: center;
   background-size: cover;
+  height: 16rem;
+  width: 100%;
   @media (max-width: 750px) {
     height: 12rem;
   }  
@@ -48,18 +47,18 @@ const CardImgContainer = styled.div`
 `;
 
 const CardFooter = styled.div`
-  display: flex;
   align-items: center;
+  background-color: ${props => props.backgroundColor};
+  color: #fff;
+  display: flex;
+  font-size: 1.2rem;
+  height: 3rem;
   justify-content: center;
   padding: 0 1rem;
-  height: 3rem;
-  background-color: ${props => props.backgroundColor};
-  font-size: 1.2rem;
-  color: #fff;
 
   & a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     text-shadow: 1px 2px 5px black;
   }
 `;

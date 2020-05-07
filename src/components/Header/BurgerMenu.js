@@ -2,28 +2,28 @@ import React from 'react'
 import styled from 'styled-components'
 
 const MenuBtn = styled.div`  
-  height: 2.1875rem;
-  width: 2.1875rem;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  height: 2.1875rem;
+  justify-content: center;
   margin-left: auto;
   margin-right: .625rem;
+  width: 2.1875rem;
   cursor: pointer;
 `;
 
 const MenuBurger = styled.div`
-  width: 1.875rem;
-  height: 3px;
   background-color: #fff;
+  height: 3px;
+  width: 1.875rem;
 
   &::before,
   &::after {
     content: '';
+    background-color: #fff;
+    height: 3px;
     position: absolute;
     width: 1.875rem;
-    height: 3px;
-    background-color: #fff;
   }
 
   &::before {

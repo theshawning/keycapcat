@@ -12,15 +12,15 @@ const CardFooterExpansion = styled.div`
 
 const SellerButtonContainer = styled.div`
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-around;
   padding: 0 1rem;
 `;
 
 export default function KeyCapCardExpansion(props) {
   return (
     <CardFooterExpansion backgroundColor={props.backgroundColor}>
-      
+
       <SellerButtonContainer>
         <SellerButton seller='Novel Keys' />
         <SellerButton seller='Novel Keys' />
