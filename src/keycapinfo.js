@@ -11,7 +11,7 @@ export const keyCapData = [
       legends: '#00c7bb'
     },
     img: {
-      render: './assets/img/gmk-nautilus-render.png'
+      render: '{nautRender}'
     }
   },
   {
@@ -25,7 +25,7 @@ export const keyCapData = [
       secondary: '#df4750'
     },
     img: {
-      // render: {bushidoRender}
+      render: '{bushidoRender}'
     }
   }
 ];

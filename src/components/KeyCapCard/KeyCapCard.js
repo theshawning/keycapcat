@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import nautRender from '../../assets/img/gmk-nautilus-render.png'
 import bushidoRender from '../../assets/img/gmk-bushido-render.png'
@@ -65,16 +65,19 @@ const CardFooter = styled.div`
 `;
 
 export default function KeyCapCard(props) {
+  const [cardExpanded, setCardExpanded ] = useState(false);
+  function expandCard() {setCardExpanded(prev => !prev)};
+  
   const { cardHeaderBg, cardFooterBg, textColor, name, startDate, endDate } = props;
 
   return (
-    <CardContainer>
+    <CardContainer onClick={expandCard}>
       <CardTitle backgroundColor={cardHeaderBg} textColor={textColor}>{name}</CardTitle>
       <CardImgContainer img={bushidoRender}/>
       <CardFooter backgroundColor={cardFooterBg}>
         <p>Runs from {startDate} to {endDate}</p>
       </CardFooter>
-      <KeyCapCardExpansion backgroundColor={cardFooterBg}/>
+      {cardExpanded && <KeyCapCardExpansion backgroundColor={cardFooterBg}/>}
     </CardContainer>
   )
 }
