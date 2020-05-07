@@ -7,8 +7,8 @@ export default styled.div`
   margin: 0 auto;
   max-width: 960px;
 
-  @media (min-width: 1300px) {
+  /* @media (min-width: 1300px) {
     flex-wrap: nowrap;
     max-width: 1250px;
-  }
+  } */
 `;

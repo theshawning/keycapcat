@@ -16,9 +16,9 @@ const CardContainer = styled.div`
   &:hover {
     cursor: pointer;
   }
-  @media (min-width: 1000px) {
+  /* @media (min-width: 1000px) {
     width: 45%;
-  }
+  } */
 `;
 
 const CardTitle = styled.h2`
@@ -54,13 +54,6 @@ const CardFooter = styled.div`
   font-size: 1.2rem;
   height: 3rem;
   justify-content: center;
-  padding: 0 1rem;
-
-  & a {
-    color: white;
-    text-decoration: none;
-    text-shadow: 1px 2px 5px black;
-  }
 `;
 
 export default function KeyCapCard(props) {
@@ -76,7 +69,11 @@ export default function KeyCapCard(props) {
       <CardFooter backgroundColor={cardFooterBg}>
         <p>Runs from {startDate} to {endDate}</p>
       </CardFooter>
-      {cardExpanded && <KeyCapCardExpansion backgroundColor={cardFooterBg}/>}
+        {cardExpanded && 
+          <KeyCapCardExpansion
+            backgroundColor={cardFooterBg}
+            designer={props.designer}
+        />}
     </CardContainer>
   )
 }

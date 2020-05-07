@@ -37,9 +37,23 @@ const CoreImgContainer = styled.div`
   }
 `;
 
+const Designer = styled.div`
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  & a {
+    color: white;
+  }
+`;
+
 export default function KeyCapCardExpansion(props) {
   return (
     <CardFooterExpansion backgroundColor={props.backgroundColor}>
+      <Designer>
+        <p>Designed by: <a href="https://www.zambumon.com">{props.designer}</a></p>
+      </Designer>
       <CoreImgContainer img={nautCore} />
       <SellerButtonContainer>
         <SellerButton seller='Novel Keys' />
