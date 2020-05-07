@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import nautRender from '../../assets/img/gmk-nautilus-render.png'
 import bushidoRender from '../../assets/img/gmk-bushido-render.png'
 import SellerButton from './SellerButton'
+import KeyCapCardExpansion from './KeyCapCardExpansion'
 
 const CardContainer = styled.div`
   display: flex;
@@ -73,6 +74,7 @@ export default function KeyCapCard(props) {
       <CardFooter backgroundColor={cardFooterBg}>
         <p>Runs from {startDate} to {endDate}</p>
       </CardFooter>
+      <KeyCapCardExpansion backgroundColor={cardFooterBg}/>
     </CardContainer>
   )
 }
