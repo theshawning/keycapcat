@@ -14,8 +14,7 @@ const MenuBtn = styled.div`
 
 const MenuBurger = styled.div`
   width: 1.875rem;
-  height: .25rem;
-  border-radius: 3px;
+  height: 3px;
   background-color: #fff;
 
   &::before,
@@ -23,17 +22,16 @@ const MenuBurger = styled.div`
     content: '';
     position: absolute;
     width: 1.875rem;
-    height: .25rem;
-    border-radius: 3px;
+    height: 3px;
     background-color: #fff;
   }
 
   &::before {
-    transform: translateY(-.625rem);
+    transform: translateY(-.5rem);
   }
 
   &::after {
-    transform: translateY(.625rem);
+    transform: translateY(.5rem);
   }
 `;
 
