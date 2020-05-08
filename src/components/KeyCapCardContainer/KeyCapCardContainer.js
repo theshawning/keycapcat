@@ -2,7 +2,7 @@ import React from 'react'
 import KeyCapCard from '../KeyCapCard/KeyCapCard'
 import { keyCapData } from '../../keycapinfo'
 
-export default function KeyCapCardContainer(props) {
+export default function KeyCapCardContainer() {
   return (
   keyCapData.map((props, index) => {
     return (
@@ -15,6 +15,7 @@ export default function KeyCapCardContainer(props) {
         textColor={props.colors.accent}
         cardHeaderBg={props.colors.primary}
         cardFooterBg={props.colors.secondary}
+        vendor={props.vendorRegions}
       />
     )
   }))

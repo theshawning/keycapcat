@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import SellerButton from './SellerButton'
-import { Button } from './SellerButton'
-import nautCore from '../../assets/img/gmk-nautilus-core.jpg'
 
 const CardFooterExpansion = styled.div`
   background-color: ${props => props.backgroundColor};
@@ -18,10 +16,28 @@ const SellerButtonContainer = styled.div`
   padding: 0 1rem;
 `;
 
+const VendorRow = styled.div`
+  background-color: rgba(255, 255, 255, .5);
+  margin: .25rem 0;
+  padding: 1rem 0;
+  text-align: center;
+
+  & a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+`;
+
+const DesignerRow = styled.div`
+  background-color: rgba(255, 255, 255, .5);
+  margin: .25rem 0;
+  text-align: center;
+`;
+
 const Designer = styled.div`
   color: white;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
   text-align: center;
   
   & button {
@@ -57,19 +73,19 @@ const Designer = styled.div`
 export default function KeyCapCardExpansion(props) {
   return (
     <CardFooterExpansion backgroundColor={props.backgroundColor}>
-      <Designer>
-        <p>Designed by: 
-          <button>
-            <a href="https://www.zambumon.com">{props.designer}</a>
-          </button>  
-        </p>
-      </Designer>
-      <SellerButtonContainer>
-        <SellerButton seller='Novel Keys' />
-        <SellerButton seller='Novel Keys' />
-        <SellerButton seller='Novel Keys' />
-        <SellerButton seller='Novel Keys' />
-      </SellerButtonContainer>
+      <DesignerRow>
+        <Designer>
+          <p>Designed by: 
+            <button>
+              <a href="https://www.zambumon.com">{props.designer}</a>
+            </button>  
+          </p>
+        </Designer>
+      </DesignerRow>
+      {props.vendor.map((region, index) => {
+        return <VendorRow key={index}><a href="#">{region}</a></VendorRow>
+      })
+      }
     </CardFooterExpansion>
   )
 }

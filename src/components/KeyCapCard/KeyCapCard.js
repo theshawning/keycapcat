@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+
+import ExpandMoreIcon from 'mdi-react/ExpandMoreIcon'
+import ExpandLessIcon from 'mdi-react/ExpandLessIcon'
+
 import nautRender from '../../assets/img/gmk-nautilus-render.png'
 import bushidoRender from '../../assets/img/gmk-bushido-render.png'
 import KeyCapCardExpansion from './KeyCapCardExpansion'
@@ -13,9 +17,6 @@ const CardContainer = styled.div`
   margin: .5rem;
   padding: 1rem;
   width: 90%;
-  &:hover {
-    cursor: pointer;
-  }
   /* @media (min-width: 1000px) {
     width: 45%;
   } */
@@ -53,8 +54,15 @@ const CardFooter = styled.div`
   display: flex;
   font-size: 1.2rem;
   height: 3rem;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 1rem;
 `;
+
+const iconStyle = {
+  backgroundColor: 'rgba(255, 255, 255, .3)',
+  borderRadius: '50%',
+  cursor: 'pointer',  
+}
 
 export default function KeyCapCard(props) {
   const [cardExpanded, setCardExpanded ] = useState(false);
@@ -63,19 +71,19 @@ export default function KeyCapCard(props) {
   const { cardHeaderBg, cardFooterBg, textColor, name, startDate, endDate } = props;
 
   return (
-    <CardContainer onClick={expandCard}>
-      <CardTitle 
-        backgroundColor={cardHeaderBg} 
-        textColor={textColor}>{name}</CardTitle>
+    <CardContainer >
+      <CardTitle backgroundColor={cardHeaderBg} textColor={textColor}>{name}</CardTitle>
       <CardImgContainer img={bushidoRender}/>
       <CardFooter backgroundColor={cardFooterBg}>
         <p>Runs from {startDate} to {endDate}</p>
+      {cardExpanded ? <ExpandMoreIcon size={30} style={iconStyle} onClick={expandCard}/> : <ExpandLessIcon size={30} style={iconStyle} onClick={expandCard}/>
+      }
       </CardFooter>
-        {cardExpanded && 
-          <KeyCapCardExpansion
-            backgroundColor={cardFooterBg}
-            designer={props.designer}
-        />}
+      {cardExpanded && <KeyCapCardExpansion 
+          backgroundColor={cardFooterBg}
+          designer={props.designer}
+          vendor={props.vendor} />
+      }
     </CardContainer>
   )
 }

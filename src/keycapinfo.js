@@ -10,9 +10,11 @@ export const keyCapData = [
       accent: '#fec900',
       legends: '#00c7bb'
     },
-    img: {
-      render: '{nautRender}'
-    }
+    vendorRegions: [
+      'Europe',
+      'Asia',
+      'North America'
+    ]
   },
   {
     name: 'GMK Bushido',
@@ -24,8 +26,11 @@ export const keyCapData = [
       accent: '#eae4df',
       secondary: '#df4750'
     },
-    img: {
-      render: '{bushidoRender}'
-    }
+    vendorRegions: [
+      'North America',
+      'Australia',
+      'Europe',
+      'International'
+    ]
   }
 ];
