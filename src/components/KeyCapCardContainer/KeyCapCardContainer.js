@@ -15,7 +15,7 @@ export default function KeyCapCardContainer() {
         textColor={props.colors.accent}
         cardHeaderBg={props.colors.primary}
         cardFooterBg={props.colors.secondary}
-        vendor={props.vendorRegions}
+        vendor={props.vendors}
       />
     )
   }))

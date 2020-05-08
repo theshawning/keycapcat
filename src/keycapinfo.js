@@ -10,15 +10,10 @@ export const keyCapData = [
       accent: '#fec900',
       legends: '#00c7bb'
     },
-    vendorRegions: [
-      'Europe',
-      'Asia',
-      'North America'
-    ],
-    vendorSellers: [
-      'Candy Keys',
-      'TX Keyboards',
-      'Novel Keys'
+    vendors: [
+      ['Europe', 'Candy Keys', '#'],
+      ['Asia', 'TX Keyboards', '#'],
+      ['North America', 'Dixie Mech', '#']
     ]
   },
   {
@@ -31,17 +26,10 @@ export const keyCapData = [
       accent: '#eae4df',
       secondary: '#df4750'
     },
-    vendorRegions: [
-      'North America',
-      'Australia',
-      'Europe',
-      'International'
+    vendors: [
+      ['North America', 'Novel Keys', '#'],
+      ['Australia', 'Oi BLoke Keys', '#'],
+      ['International', 'SomeKeyCo', '#']
     ],
-    vendorSellers: [
-      'Dixie Mech',
-      'Oi Bloke Keys',
-      'Candy Keys',
-      'Intl Key Co.'
-    ]
   }
 ];
