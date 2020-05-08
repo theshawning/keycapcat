@@ -11,7 +11,7 @@ export const keyCapData = [
       legends: '#00c7bb'
     },
     vendors: [
-      ['Europe', 'Candy Keys', '#'],
+      ['Europe', 'Candy Keys', 'https://www.candykeys.com'],
       ['Asia', 'TX Keyboards', '#'],
       ['North America', 'Dixie Mech', '#']
     ]

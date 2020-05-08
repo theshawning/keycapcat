@@ -41,8 +41,11 @@ export default function KeyCapCardExpansion(props) {
       </VendorRow>
       {props.vendor.map((region, index) => {
         return (
-          <VendorRow key={index}><a href={region[2]}>
-            <span>{region[0]} &bull; {region[1]}</span></a></VendorRow>
+          <a key={index} href={region[2]} target='_blank' rel='noopeneer noreferrer'>
+            <VendorRow>
+              <span>{region[0]} &bull; {region[1]}</span>
+            </VendorRow>
+          </a>
         )
       })
       }
