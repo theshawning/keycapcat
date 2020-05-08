@@ -17,22 +17,24 @@ const SellerButtonContainer = styled.div`
 `;
 
 const VendorRow = styled.div`
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .3);
+  color: white;
+  font-size: 1.2rem;
   margin: .25rem 0;
   padding: 1rem 0;
   text-align: center;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, .5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
+    cursor: pointer;    
+  }
 
   & a {
     color: white;
     font-size: 1.2rem;
     text-decoration: none;
   }
-`;
-
-const DesignerRow = styled.div`
-  background-color: rgba(255, 255, 255, .5);
-  margin: .25rem 0;
-  text-align: center;
 `;
 
 const Designer = styled.div`
@@ -73,15 +75,12 @@ const Designer = styled.div`
 export default function KeyCapCardExpansion(props) {
   return (
     <CardFooterExpansion backgroundColor={props.backgroundColor}>
-      <DesignerRow>
-        <Designer>
-          <p>Designed by: 
-            <button>
-              <a href="https://www.zambumon.com">{props.designer}</a>
-            </button>  
+      <VendorRow>
+        <a href="#">
+          <p>Designed by: {props.designer} 
           </p>
-        </Designer>
-      </DesignerRow>
+        </a>
+      </VendorRow>
       {props.vendor.map((region, index) => {
         return <VendorRow key={index}><a href="#">{region}</a></VendorRow>
       })

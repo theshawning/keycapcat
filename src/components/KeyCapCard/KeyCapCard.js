@@ -61,7 +61,7 @@ const CardFooter = styled.div`
 const iconStyle = {
   backgroundColor: 'rgba(255, 255, 255, .3)',
   borderRadius: '50%',
-  cursor: 'pointer',  
+  cursor: 'pointer'
 }
 
 export default function KeyCapCard(props) {
@@ -73,10 +73,10 @@ export default function KeyCapCard(props) {
   return (
     <CardContainer >
       <CardTitle backgroundColor={cardHeaderBg} textColor={textColor}>{name}</CardTitle>
-      <CardImgContainer img={bushidoRender}/>
+      <CardImgContainer img={nautRender}/>
       <CardFooter backgroundColor={cardFooterBg}>
         <p>Runs from {startDate} to {endDate}</p>
-      {cardExpanded ? <ExpandMoreIcon size={30} style={iconStyle} onClick={expandCard}/> : <ExpandLessIcon size={30} style={iconStyle} onClick={expandCard}/>
+      {cardExpanded ? <ExpandLessIcon size={30} style={iconStyle} onClick={expandCard}/> : <ExpandMoreIcon size={30} style={iconStyle} onClick={expandCard}/>
       }
       </CardFooter>
       {cardExpanded && <KeyCapCardExpansion 

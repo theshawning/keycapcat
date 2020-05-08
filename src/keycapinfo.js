@@ -14,6 +14,11 @@ export const keyCapData = [
       'Europe',
       'Asia',
       'North America'
+    ],
+    vendorSellers: [
+      'Candy Keys',
+      'TX Keyboards',
+      'Novel Keys'
     ]
   },
   {
@@ -31,6 +36,12 @@ export const keyCapData = [
       'Australia',
       'Europe',
       'International'
+    ],
+    vendorSellers: [
+      'Dixie Mech',
+      'Oi Bloke Keys',
+      'Candy Keys',
+      'Intl Key Co.'
     ]
   }
 ];
