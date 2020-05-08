@@ -18,25 +18,6 @@ const SellerButtonContainer = styled.div`
   padding: 0 1rem;
 `;
 
-const CoreImgContainer = styled.div`
-  background-image: url(${props => props.img});
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 300px;
-  margin-bottom: 1rem;
-  width: auto;
-  @media (max-width: 750px) {
-    height: 12rem;
-  }  
-  @media (max-width: 600px) {
-    height: 10rem;
-  }
-  @media (max-width: 400px) {
-    height: 8rem;
-  }
-`;
-
 const Designer = styled.div`
   color: white;
   font-size: 1.2rem;
@@ -83,7 +64,6 @@ export default function KeyCapCardExpansion(props) {
           </button>  
         </p>
       </Designer>
-      <CoreImgContainer img={nautCore} />
       <SellerButtonContainer>
         <SellerButton seller='Novel Keys' />
         <SellerButton seller='Novel Keys' />
@@ -93,3 +73,23 @@ export default function KeyCapCardExpansion(props) {
     </CardFooterExpansion>
   )
 }
+
+// saving this for later if needed
+// const CoreImgContainer = styled.div`
+//   background-image: url(${props => props.img});
+//   background-position: center;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   height: 300px;
+//   margin-bottom: 1rem;
+//   width: auto;
+//   @media (max-width: 750px) {
+//     height: 12rem;
+//   }  
+//   @media (max-width: 600px) {
+//     height: 10rem;
+//   }
+//   @media (max-width: 400px) {
+//     height: 8rem;
+//   }
+// `;

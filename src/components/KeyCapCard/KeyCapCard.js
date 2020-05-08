@@ -64,7 +64,9 @@ export default function KeyCapCard(props) {
 
   return (
     <CardContainer onClick={expandCard}>
-      <CardTitle backgroundColor={cardHeaderBg} textColor={textColor}>{name}</CardTitle>
+      <CardTitle 
+        backgroundColor={cardHeaderBg} 
+        textColor={textColor}>{name}</CardTitle>
       <CardImgContainer img={bushidoRender}/>
       <CardFooter backgroundColor={cardFooterBg}>
         <p>Runs from {startDate} to {endDate}</p>
