@@ -1,10 +1,10 @@
 import React from 'react'
-import { Wrapper, Header, KeyCapCardContainer, Greeting} from '../../components'
+import { Wrapper, Navbar, KeyCapCardContainer, Greeting} from '../../components'
 
 export default function KeycapPage() {
   return (
     <>
-      <Header />
+      <Navbar />
       <Greeting />
       <Wrapper>
         <KeyCapCardContainer />

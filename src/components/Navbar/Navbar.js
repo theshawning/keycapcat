@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import BurgerMenu from './BurgerMenu'
 import MenuOpen from './MenuOpen'
 
@@ -29,7 +30,9 @@ export default function Header() {
 
   return (
     <Navbar>
-      <Logo>&bull; KeyCapCat &bull;</Logo>
+      <Link to='/'>
+        <Logo>&bull; KeyCapCat &bull;</Logo>      
+      </Link>
       <BurgerMenu click={openMenu}/>   
       <MenuOpen open={menuOpen} />
     </Navbar>
