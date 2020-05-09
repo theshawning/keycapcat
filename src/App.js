@@ -1,6 +1,7 @@
 import React from 'react'
+import { Switch, Route } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
-import { Wrapper, Header, KeyCapCardContainer, Greeting } from './components'
+import { HomePage, KeycapPage } from './pages'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -20,13 +21,10 @@ export default function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
-      <Greeting />
-      <Wrapper>
-        <KeyCapCardContainer />
-      </Wrapper>
+      <Switch>
+        <Route path='/' exact component={HomePage} />
+        <Route path='/keycaps' component={KeycapPage} />
+      </Switch>
     </>
   )
 }
-
-// #FFEBCF - #F1D1B5 - #F0B7A4 - #F18C8E - #305F72
