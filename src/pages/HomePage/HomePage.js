@@ -1,8 +1,11 @@
 import React from 'react'
-import Hero from '../../components/Hero/Hero'
+import { Hero, HomeGreeting } from '../../components/'
 
 export default function HomePage() {
   return (
-    <Hero />
+    <>
+      <Hero />
+      <HomeGreeting />
+    </>
   )
 }
