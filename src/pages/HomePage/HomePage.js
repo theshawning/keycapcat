@@ -1,11 +1,12 @@
 import React from 'react'
-import { Hero, HomeGreeting } from '../../components/'
+import { Hero, HomeGreeting, HomeMain } from '../../components/'
 
 export default function HomePage() {
   return (
     <>
       <Hero />
       <HomeGreeting />
+      <HomeMain />
     </>
   )
 }

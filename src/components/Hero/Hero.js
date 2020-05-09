@@ -10,7 +10,7 @@ const Landing = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 80vh;
+  height: 70vh;
   min-height: 400px;
   overflow: hidden;
   width: 100%;
@@ -54,7 +54,7 @@ const SubHeading = styled.h2`
     font-size: 1.15rem;
   }
   @media (max-width: 310px) {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 `;
 

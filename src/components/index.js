@@ -5,3 +5,4 @@ export { default as KeyCapCardContainer } from './KeyCapCardContainer/KeyCapCard
 export { default as Greeting } from './Greeting/Greeting'
 export { default as Hero } from './Hero/Hero'
 export { default as HomeGreeting } from './HomeGreeting/HomeGreeting'
+export { default as HomeMain } from './HomeMain/HomeMain'
