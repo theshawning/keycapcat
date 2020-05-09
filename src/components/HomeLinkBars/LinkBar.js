@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import keycapset from '../../assets/img/keycap-set-sm.jpg'
+import keycapset from '../../assets/img/wood-set.jpg' 
 
 const LinkDiv = styled.div`
-  background: linear-gradient(to right, rgba(255, 255, 255, .2), rgba(0, 0, 0, 1)), url(${keycapset});
+  background: linear-gradient(to right, rgba(255, 255, 255, .2), rgba(0, 0, 0, 5)), url(${keycapset});
   background-size: cover;
   background-position: center;
   display: flex;
@@ -25,11 +25,11 @@ const LinkDiv = styled.div`
   & h4 {
     color: whitesmoke;
     font-size: 2.8rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 1.2px;
     margin-left: auto;
     margin-right: 1rem;
-    text-shadow: 2px 2px 8px rgba(255, 255, 255, .4);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, .9);
   }
 `;
 
