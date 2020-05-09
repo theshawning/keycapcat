@@ -11,6 +11,7 @@ const Landing = styled.header`
   flex-direction: column;
   justify-content: center;
   height: 80vh;
+  min-height: 400px;
   overflow: hidden;
   width: 100%;
 `;
@@ -45,7 +46,7 @@ const SubHeading = styled.h2`
 `;
 
 
-export default function Home() {
+export default function Hero() {
   return (
     <Landing>
       <HeadingContainer>
