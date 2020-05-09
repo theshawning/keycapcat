@@ -26,11 +26,18 @@ const HeadingContainer = styled.section`
 
 const Heading = styled.h1`
   color: whitesmoke;
-  font-size: 3rem;
+  font-size: 3rem;  
+  letter-spacing: 1.5px;
   text-shadow: 2px 5px 10px rgba(0,0,0,.9);
 
   @media (max-width: 500px) {
-    font-size: 2rem;
+    font-size: 2.4rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 1.8rem;
+  }
+  @media (max-width: 310px) {
+    font-size: 1.5rem;
   }
 `;
 
@@ -41,7 +48,13 @@ const SubHeading = styled.h2`
   text-shadow: 2px 3px 5px rgba(0,0,0,.9);
 
   @media (max-width: 500px) {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 1.15rem;
+  }
+  @media (max-width: 310px) {
+    font-size: 1rem;
   }
 `;
 
