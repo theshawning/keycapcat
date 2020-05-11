@@ -1,16 +1,19 @@
 export const keyboardData = [
   {
-    name: 'RamaM65-B',
+    type: 'keyboard',
+    name: 'Rama M65-B',
     designer: 'Rama Works',
     startDate: 'April 1',
     endDate: 'May 1',
     colors: {
-      primary: '#43484c',
-      secondary: '#ffc700',
-      accent: '#dce6e5',
+      headerBg: '#43484c',
+      headerTextColor: '#dce6e5',
+      footerBg: '#ffc700',
+      footerTextColor: '#000',
+      white: '#fff' 
     },
     vendors: [
-      ['Rama Works', 'https://rama.works/#/m65-b/']
+      ['Global', 'Rama Works', 'https://rama.works/#/m65-b/']
     ]
   }
 ]

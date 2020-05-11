@@ -24,8 +24,8 @@ const CardContainer = styled.div`
 `;
 
 const CardTitle = styled.h2`
-  background-color: ${props => props.backgroundColor};
-  color: ${props => props.textColor || 'white'};
+  background-color: ${props => props.headerBg};
+  color: ${props => props.headerTextColor || 'white'};
   display: flex;
   padding: .8rem;
   text-transform: uppercase;
@@ -51,12 +51,13 @@ const CardImgContainer = styled.div`
 const CardFooter = styled.div`
   align-items: center;
   background-color: ${props => props.backgroundColor};
-  color: #fff;
+  color: ${props => props.footerTextColor};
   display: flex;
   font-size: 1.2rem;
   height: 3rem;
   justify-content: space-between;
   padding: 0 1rem;
+  text-shadow: ${props => props.noTextShadow || '3px 2px 5px white'};
 `;
 
 const iconStyle = {
@@ -65,25 +66,27 @@ const iconStyle = {
   cursor: 'pointer'
 }
 
-export default function KeyCapCard(props) {
+export default function Card(props) {
   const [cardExpanded, setCardExpanded ] = useState(false);
   function expandCard() {setCardExpanded(prev => !prev)};
   
-  const { cardHeaderBg, cardFooterBg, textColor, name, startDate, endDate } = props;
+  const { cardHeaderBg, cardFooterBg, headerTextColor, name, startDate, endDate, type, designer, vendor, footerTextColor } = props;
 
   return (
     <CardContainer >
-      <CardTitle backgroundColor={cardHeaderBg} textColor={textColor}>{name}</CardTitle>
+      <CardTitle headerBg={cardHeaderBg} headerTextColor={headerTextColor}>{name}</CardTitle>
       <CardImgContainer img={m65b}/>
-      <CardFooter backgroundColor={cardFooterBg}>
+      <CardFooter backgroundColor={cardFooterBg} dark={props.dark} noTextShadow>
         <p>Runs from {startDate} to {endDate}</p>
       {cardExpanded ? <ExpandLessIcon size={30} style={iconStyle} onClick={expandCard}/> : <ExpandMoreIcon size={30} style={iconStyle} onClick={expandCard}/>
       }
       </CardFooter>
       {cardExpanded && <KeyCapCardExpansion 
           backgroundColor={cardFooterBg}
-          designer={props.designer}
-          vendor={props.vendor} />
+          designer={designer}
+          vendor={vendor} 
+          textcolor={footerTextColor} 
+          type={type} />
       }
     </CardContainer>
   )

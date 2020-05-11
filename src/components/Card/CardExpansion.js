@@ -11,7 +11,7 @@ const CardFooterExpansion = styled.div`
 
 const VendorRow = styled.div`
   background-color: rgba(255, 255, 255, .3);
-  color: white;
+  color: ${props => props.textcolor};
   font-size: 1.2rem;
   margin: .25rem 0;
   padding: 1rem 0;
@@ -19,35 +19,49 @@ const VendorRow = styled.div`
 
   &:hover {
     background-color: rgba(255, 255, 255, .5);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
+    /* text-shadow: 2px 2px 5px rgba(255,255,255, .9); */
     cursor: pointer;    
   }
 
   & a {
-    color: white;
+    color: ${props => props.textcolor};
     font-size: 1.2rem;
     text-decoration: none;
   }
 `;
 
 export default function KeyCapCardExpansion(props) {
+  const { textcolor, designer, backgroundColor, type} = props;
+
+  if (type === 'keyboard') return (
+    <CardFooterExpansion backgroundColor={backgroundColor}>
+      {props.vendor.map((region, index) => {
+        return (
+          <a key={index} href={region[2]} textcolor={textcolor} target='_blank' rel='noopeneer noreferrer'>
+            <VendorRow textcolor={textcolor}>
+              <span>{region[0]} &bull; {region[1]}</span>
+            </VendorRow>
+          </a>
+        )})
+      }
+    </CardFooterExpansion>
+  )
+
   return (
-    <CardFooterExpansion backgroundColor={props.backgroundColor}>
-      <VendorRow>
-        <a href="#">
-          <p>Designed by: {props.designer} 
-          </p>
+    <CardFooterExpansion backgroundColor={backgroundColor}>
+      <VendorRow textcolor={textcolor}>
+        <a href="#" textcolor={textcolor}>
+          <p>Designed by: {designer}</p>
         </a>
       </VendorRow>
       {props.vendor.map((region, index) => {
         return (
-          <a key={index} href={region[2]} target='_blank' rel='noopeneer noreferrer'>
-            <VendorRow>
+          <a key={index} href={region[2]} textcolor={textcolor} target='_blank' rel='noopeneer noreferrer'>
+            <VendorRow textcolor={textcolor}>
               <span>{region[0]} &bull; {region[1]}</span>
             </VendorRow>
           </a>
-        )
-      })
+        )})
       }
     </CardFooterExpansion>
   )
