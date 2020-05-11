@@ -10,7 +10,7 @@ export const keyboardData = [
       headerTextColor: '#dce6e5',
       footerBg: '#ffc700',
       footerTextColor: '#000',
-      white: '#fff' 
+      textShadow: 'none'
     },
     vendors: [
       ['Global', 'Rama Works', 'https://rama.works/#/m65-b/']

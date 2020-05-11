@@ -16,6 +16,7 @@ const VendorRow = styled.div`
   margin: .25rem 0;
   padding: 1rem 0;
   text-align: center;
+  text-shadow: 2px 2px 3px ${props => props.textshadow};
 
   &:hover {
     background-color: rgba(255, 255, 255, .5);
@@ -27,17 +28,18 @@ const VendorRow = styled.div`
     color: ${props => props.textcolor};
     font-size: 1.2rem;
     text-decoration: none;
+    text-shadow: 2px 2px 3px ${props => props.textshadow};
   }
 `;
 
 export default function KeyCapCardExpansion(props) {
-  const { textcolor, designer, backgroundColor, type} = props;
+  const { textcolor, designer, backgroundColor, type, textshadow} = props;
 
   if (type === 'keyboard') return (
-    <CardFooterExpansion backgroundColor={backgroundColor}>
+    <CardFooterExpansion backgroundColor={backgroundColor} textshadow={textshadow}>
       {props.vendor.map((region, index) => {
         return (
-          <a key={index} href={region[2]} textcolor={textcolor} target='_blank' rel='noopeneer noreferrer'>
+          <a key={index} href={region[2]} textcolor={textcolor} textshadow={textshadow} target='_blank' rel='noopeneer noreferrer'>
             <VendorRow textcolor={textcolor}>
               <span>{region[0]} &bull; {region[1]}</span>
             </VendorRow>
@@ -49,15 +51,15 @@ export default function KeyCapCardExpansion(props) {
 
   return (
     <CardFooterExpansion backgroundColor={backgroundColor}>
-      <VendorRow textcolor={textcolor}>
+      <VendorRow textcolor={textcolor} textshadow={textshadow}>
         <a href="#" textcolor={textcolor}>
           <p>Designed by: {designer}</p>
         </a>
       </VendorRow>
       {props.vendor.map((region, index) => {
         return (
-          <a key={index} href={region[2]} textcolor={textcolor} target='_blank' rel='noopeneer noreferrer'>
-            <VendorRow textcolor={textcolor}>
+          <a key={index} href={region[2]} textcolor={textcolor} textshadow={textshadow} target='_blank' rel='noopeneer noreferrer'>
+            <VendorRow textcolor={textcolor} textshadow={textshadow}>
               <span>{region[0]} &bull; {region[1]}</span>
             </VendorRow>
           </a>

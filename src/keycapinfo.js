@@ -1,14 +1,16 @@
 export const keyCapData = [
   {
+    type: 'keycap',
     name: 'GMK Nautilus',
     designer: 'Zambumon',
     startDate: 'April 1',
     endDate: 'May 1',
     colors: {
-      primary: '#005278',
-      secondary: '#233653',
-      accent: '#fec900',
-      legends: '#00c7bb'
+      headerBg: '#005278',
+      headerTextColor: '#fec900',
+      footerBg: '#233653',
+      footerTextColor: 'white',
+      textShadow: 'black'
     },
     vendors: [
       ['Europe', 'Candy Keys', 'https://www.candykeys.com'],
@@ -17,14 +19,17 @@ export const keyCapData = [
     ]
   },
   {
+    type: 'keycap',
     name: 'GMK Bushido',
     designer: 'Some dude',
     startDate: 'April 1',
     endDate: 'May 1',
     colors: {
-      primary: '#444a58',
-      accent: '#eae4df',
-      secondary: '#df4750'
+      headerBg: '#444a58',
+      headerTextColor: '#eae4df',
+      footerBg: '#df4750',
+      footerTextColor: 'white',
+      textShadow: 'black'
     },
     vendors: [
       ['North America', 'Novel Keys', '#'],

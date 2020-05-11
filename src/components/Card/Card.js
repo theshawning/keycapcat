@@ -57,11 +57,11 @@ const CardFooter = styled.div`
   height: 3rem;
   justify-content: space-between;
   padding: 0 1rem;
-  text-shadow: ${props => props.noTextShadow || '3px 2px 5px white'};
+  text-shadow: 2px 3px 5px ${props => props.textShadow};
 `;
 
 const iconStyle = {
-  backgroundColor: 'rgba(255, 255, 255, .3)',
+  backgroundColor: 'rgba(255, 255, 255, .4)',
   borderRadius: '50%',
   cursor: 'pointer'
 }
@@ -70,13 +70,13 @@ export default function Card(props) {
   const [cardExpanded, setCardExpanded ] = useState(false);
   function expandCard() {setCardExpanded(prev => !prev)};
   
-  const { cardHeaderBg, cardFooterBg, headerTextColor, name, startDate, endDate, type, designer, vendor, footerTextColor } = props;
+  const { cardHeaderBg, cardFooterBg, headerTextColor, name, startDate, endDate, type, designer, vendor, footerTextColor, textShadow } = props;
 
   return (
     <CardContainer >
       <CardTitle headerBg={cardHeaderBg} headerTextColor={headerTextColor}>{name}</CardTitle>
-      <CardImgContainer img={m65b}/>
-      <CardFooter backgroundColor={cardFooterBg} dark={props.dark} noTextShadow>
+      <CardImgContainer img={nautRender}/>
+      <CardFooter backgroundColor={cardFooterBg} footerTextColor={footerTextColor} textShadow={textShadow}>
         <p>Runs from {startDate} to {endDate}</p>
       {cardExpanded ? <ExpandLessIcon size={30} style={iconStyle} onClick={expandCard}/> : <ExpandMoreIcon size={30} style={iconStyle} onClick={expandCard}/>
       }
@@ -86,6 +86,7 @@ export default function Card(props) {
           designer={designer}
           vendor={vendor} 
           textcolor={footerTextColor} 
+          textshadow={textShadow}
           type={type} />
       }
     </CardContainer>

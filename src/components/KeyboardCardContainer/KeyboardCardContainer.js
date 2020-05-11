@@ -19,7 +19,7 @@ export default function KeyCapCardContainer() {
         headerTextColor={props.colors.headerTextColor}
         cardFooterBg={props.colors.footerBg}
         footerTextColor={props.colors.footerTextColor}
-        dark={props.colors.dark}
+        textShadow={props.colors.textShadow}
         vendor={vendors}
       />
     )

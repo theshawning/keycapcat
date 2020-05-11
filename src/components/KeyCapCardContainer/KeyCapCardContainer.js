@@ -5,17 +5,22 @@ import { keyCapData } from '../../keycapinfo'
 export default function KeyCapCardContainer() {
   return (
   keyCapData.map((props, index) => {
+    const { type, name, designer, startDate, endDate, vendors } = props;
+
     return (
       <Card 
         key={index}
-        name={props.name}
-        designer={props.designer}
-        startDate={props.startDate}
-        endDate={props.endDate}
-        textColor={props.colors.accent}
-        cardHeaderBg={props.colors.primary}
-        cardFooterBg={props.colors.secondary}
-        vendor={props.vendors}
+        type={type}
+        name={name}
+        designer={designer}
+        startDate={startDate}
+        endDate={endDate}
+        cardHeaderBg={props.colors.headerBg}
+        headerTextColor={props.colors.headerTextColor}
+        cardFooterBg={props.colors.footerBg}
+        footerTextColor={props.colors.footerTextColor}
+        textShadow={props.colors.textShadow}
+        vendor={vendors} 
       />
     )
   }))
