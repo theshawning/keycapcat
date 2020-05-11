@@ -1,10 +1,10 @@
 import React from 'react'
 import Card from '../Card/Card'
-import { keyCapData } from '../../keycapinfo'
+import { keyboardData } from '../../keyboardinfo'
 
 export default function KeyCapCardContainer() {
   return (
-  keyCapData.map((props, index) => {
+  keyboardData.map((props, index) => {
     return (
       <Card 
         key={index}

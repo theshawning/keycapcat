@@ -6,7 +6,8 @@ import ExpandLessIcon from 'mdi-react/ExpandLessIcon'
 
 import nautRender from '../../assets/img/gmk-nautilus-render.png'
 import bushidoRender from '../../assets/img/gmk-bushido-render.png'
-import KeyCapCardExpansion from './KeyCapCardExpansion'
+import m65b from '../../assets/img/rama-m65b.jpg'
+import KeyCapCardExpansion from './CardExpansion'
 
 const CardContainer = styled.div`
   background-color: white;
@@ -34,13 +35,13 @@ const CardImgContainer = styled.div`
   background-image: url(${props => props.img});
   background-position: center;
   background-size: cover;
-  height: 16rem;
+  height: 17rem;
   width: 100%;
   @media (max-width: 750px) {
-    height: 12rem;
+    height: 13rem;
   }  
   @media (max-width: 600px) {
-    height: 10rem;
+    height: 11rem;
   }
   @media (max-width: 400px) {
     height: 8rem;
@@ -73,7 +74,7 @@ export default function KeyCapCard(props) {
   return (
     <CardContainer >
       <CardTitle backgroundColor={cardHeaderBg} textColor={textColor}>{name}</CardTitle>
-      <CardImgContainer img={nautRender}/>
+      <CardImgContainer img={m65b}/>
       <CardFooter backgroundColor={cardFooterBg}>
         <p>Runs from {startDate} to {endDate}</p>
       {cardExpanded ? <ExpandLessIcon size={30} style={iconStyle} onClick={expandCard}/> : <ExpandMoreIcon size={30} style={iconStyle} onClick={expandCard}/>

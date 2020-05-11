@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
-import { HomePage, KeycapPage } from './pages'
+import { HomePage, KeycapPage, KeyboardPage } from './pages'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -24,6 +24,7 @@ export default function App() {
       <Switch>
         <Route path='/' exact component={HomePage} />
         <Route path='/keycaps' component={KeycapPage} />
+        <Route path='/keyboards' component={KeyboardPage} />
       </Switch>
     </>
   )
