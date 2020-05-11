@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Drawer = styled.div`
@@ -41,13 +42,17 @@ const Drawer = styled.div`
   }
 `;
 
+const linkStyle = {
+  color: 'white'
+}
+
 export default function MenuOpen(props) {
   return (
     <Drawer open={props.open}>
       <ul>
-        <li>Home</li>
-        <li>Keycaps</li>
-        <li>Newsletter</li>
+        <Link style={linkStyle} to='/'><li>Home</li></Link>
+        <Link style={linkStyle} to='/keycaps'><li>Keycaps</li></Link>
+        <Link style={linkStyle} to='/keyboards'><li>Keyboards</li></Link>
         <li>Contact</li>
       </ul>
     </Drawer>
