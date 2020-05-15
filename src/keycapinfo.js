@@ -1,4 +1,4 @@
-export const keyCapData = [
+export const keycapData = [
   {
     type: 'keycap',
     name: 'GMK Nautilus',

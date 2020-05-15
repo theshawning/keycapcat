@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import firebase from './firebase'
 import { Switch, Route } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
@@ -19,19 +19,6 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default function App() {
-  const [keycaps, setKeycaps] = useState()
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const db = firebase.firestore()
-      const data = await db.collection('keycaps').get()
-      setKeycaps(data.map(doc => doc.data()))
-    }
-    fetchData()
-    
-    console.log(keycaps)
-  }, [])
-
   return (
     <>
       <GlobalStyle />
